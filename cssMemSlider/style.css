@@ -4,9 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1z_8pgX-RVy3xGF7jrW_YjfgnWAFupVZh4w&usqp=CAU");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #373434;
 }
 .wrapper {
   display: flex;
@@ -14,37 +12,101 @@ body {
   align-items: center;
   justify-content: center;
   padding: 6% 0 6%;
-  /* height: 100vh; */
+}
+input[name="dot"] {
+  display: none;
 }
 .slider {
   width: 70%;
   overflow: hidden;
 }
+.slides_img {
+  display: flex;
+  width: 500%;
+  height: 100%;
+}
+.img_container {
+  display: flex;
+  width: 20%;
+  border: 3px solid #cccccc;
+  border-radius: 10px;
+  transition: 1s ease;
+}
 .img {
   width: 100%;
-  border-radius: 10px;
+}
+.title_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+.titles {
+  display: flex;
+  width: 500%;
+  height: 100%;
+}
+.title_container {
+  width: 20%;
 }
 .title_img {
   color: #fff;
   font-family: "Lora", serif;
   font-size: 2rem;
+  width: 100%;
 }
 .controls {
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 20px;
 }
 .dot_slider {
   display: block;
-  margin: 10px;
-  width: 25px;
-  height: 25px;
+  position: relative;
+  margin: 0.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border: 3px solid #fff;
+  background-color: #999999;
   border-radius: 50%;
+  transition: 0.5s ease-in-out;
 }
-.dot_slider:hover {
-  background-color: #fff;
+
+.dot_slider::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 4rem;
+  top: -92%;
+  left: -49%;
+}
+label:hover {
+  background-color: #ffff66 !important;
   cursor: pointer;
 }
-.dot_slider:active {
-  background-color: aqua;
+
+#slide_one:checked ~ .title_container .controls label:nth-of-type(1),
+#slide_two:checked ~ .title_container .controls label:nth-of-type(2),
+#slide_three:checked ~ .title_container .controls label:nth-of-type(3),
+#slide_four:checked ~ .title_container .controls label:nth-of-type(4),
+#slide_five:checked ~ .title_container .controls label:nth-of-type(5) {
+  background: none;
+}
+
+#slide_one:checked ~ .slides_img .slide_one {
+  margin-left: 0;
+}
+#slide_two:checked ~ .slides_img .slide_one {
+  margin-left: -20%;
+}
+#slide_three:checked ~ .slides_img .slide_one {
+  margin-left: -40%;
+}
+#slide_four:checked ~ .slides_img .slide_one {
+  margin-left: -60%;
+}
+#slide_five:checked ~ .slides_img .slide_one {
+  margin-left: -80%;
 }
