@@ -39,8 +39,9 @@ input[name="dot"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-wrap: wrap-reverse; */
-  margin-top: 20px;
+
+  margin-top: 30px;
+  transition: 1s ease-in-out;
 }
 .about {
   width: 100%;
@@ -56,6 +57,7 @@ input[name="dot"] {
   align-items: center;
   justify-content: flex-start;
   width: 20%;
+  transition: 1s ease;
 }
 .title_img {
   color: #fff;
@@ -132,4 +134,15 @@ label:hover {
 }
 #slide_five:checked ~ .title_wrapper .titles .slide_title_one {
   margin-left: -80%;
+}
+@media (max-width: 768px) {
+  .title_wrapper {
+    flex-wrap: wrap-reverse;
+  }
+  .controls {
+    justify-content: center;
+  }
+  .titles {
+    margin-top: 20px;
+  }
 }
