@@ -4,8 +4,68 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div class="wrapper">
+        <div class="slider">
+          <div class="slides_img">
+            <input type="radio" name="dot" id="slide_one" checked />
+            <input type="radio" name="dot" id="slide_two" />
+            <input type="radio" name="dot" id="slide_three" />
+            <input type="radio" name="dot" id="slide_four" />
+            <input type="radio" name="dot" id="slide_five" />
+            <input type="radio" name="dot" id="slide_six" />
+            <div class="img_container">
+              <img class="img" src="./assets/img/1.jpg" alt="mem" />
+              <p class="title_img">What I look like at the gym</p>
+            </div>
+            <div class="img_container">
+              <img class="img" src="./assets/img/2.jpg" alt="mem" />
+              <p class="title_img">
+                When the pizza delivery gue gets to your house 9 minutes earlier
+                than expected
+              </p>
+            </div>
+            <div class="img_container">
+              <img class="img" src="./assets/img/3.jpg" alt="mem" />
+              <p class="title_img">Me after a blowout</p>
+            </div>
+            <div class="img_container">
+              <img class="img" src="./assets/img/4.jpg" alt="mem" />
+              <p class="title_img">
+                When you walk past someone in the grocery store
+              </p>
+            </div>
+            <div class="img_container">
+              <img class="img" src="./assets/img/5.jpg" alt="mem" />
+              <p class="title_img">
+                Trying to look natural in front of your crush
+              </p>
+            </div>
+            <div class="img_container">
+              <img class="img" src="./assets/img/6.jpg" alt="mem" />
+              <p class="title_img">The boys at the bar watching the game</p>
+            </div>
+          </div>
+          <div class="controls">
+            <label for="slide_one" class="dot_slider"></label>
+            <label for="slide_two" class="dot_slider"></label>
+            <label for="slide_three" class="dot_slider"></label>
+            <label for="slide_four" class="dot_slider"></label>
+            <label for="slide_five" class="dot_slider"></label>
+            <label for="slide_six" class="dot_slider"></label>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
