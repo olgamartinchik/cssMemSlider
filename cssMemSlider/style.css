@@ -148,6 +148,14 @@ label:hover {
 #slide_five:checked ~ .title_wrapper .titles .slide_title_one {
   margin-left: -80%;
 }
+@media (max-width: 904px) {
+  .title_wrapper {
+    flex-wrap: wrap-reverse;
+  }
+  .controls {
+    justify-content: center;
+  }
+}
 @media (max-width: 768px) {
   .title_wrapper {
     flex-wrap: wrap-reverse;
