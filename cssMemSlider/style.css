@@ -27,6 +27,8 @@ input[name="dot"] {
 }
 .img_container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20%;
   border: 3px solid #fffadd;
   border-radius: 10px;
@@ -34,6 +36,7 @@ input[name="dot"] {
 }
 .img {
   width: 100%;
+  border-radius: 7px;
 }
 .title_wrapper {
   display: flex;
